@@ -19,7 +19,7 @@
             <div id="slider" tabindex="0" @mouseover="stopScroll" @mouseleave="playScroll" @keyup.left="prevSlide" @keyup.right="nextSlide">
                 <div id="items-container">
                     <div class="cs-item">
-                        <img :src="slides[currentIndexActive].image" :alt="slides[currentIndexActive].title" />
+                        <img :src="slides[currentIndexActive].image" :alt="slides[currentIndexActive].title"/>
                         <div class="cs-title">
                             <h2>{{slides[currentIndexActive].title}}</h2>
                             <p class="mb-0">{{slides[currentIndexActive].text}}</p>
@@ -30,18 +30,13 @@
                     <div class="thumb" :class="{'active': index === currentIndexActive}" v-for="(thumb, index) in slides" @click="currentIndexActive = index">
                         <img :src="thumb.image" :alt="thumb.title"/>
                     </div>
-                </div>
-
-                <div id="player" class="d-flex justify-content-center align-items-center">
                     <div id="iPrev" class="prev" @click="prevSlide">
                         <i class="fa-solid fa-chevron-left"></i>
                     </div>
-                    
                     <div id="iNext" class="next" @click="nextSlide">
                         <i class="fa-solid fa-chevron-right"></i>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
